@@ -76,6 +76,7 @@ body {
 
 #about-me {
 	flex: 2
+
 }
 
 .about-me__title {
@@ -119,7 +120,6 @@ body {
 
 .nav-pills .nav-link {
 	color: #000
-	
 }
 
 .item-column {
