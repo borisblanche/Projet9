@@ -81,9 +81,9 @@ body {
 
 #about-me {
 	width: 50%;
+/* display: flex; */
 
-
-	/* flex: 2 */
+	flex: 2
 }
 
 .about-me__title {
