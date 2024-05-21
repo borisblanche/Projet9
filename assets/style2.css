@@ -9,6 +9,10 @@ body {
 }
 
 .top-header {
+	background-color: white;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
 	display: flex;
 	justify-content: space-between;
 	padding-inline: 100px;
@@ -31,51 +35,61 @@ body {
 	padding-inline: 10px;
 }
 
+.nav a {
+	text-decoration: none;
+	color: #000
+}
+
+.social-link img {
+	width: 20px;
+}
+
 #about {
 	display: flex;
 	background-color: #F6D2B8;
-	/* background-color: red; */
-	padding-inline: 100px;
-	padding-block: 100px;
+	width: 100%;
 	position: relative;
+	z-index: -1;
 }
 
 .picture.left::before {
 	content: ' ';
 	background-color: #E5975F;
-	/* background-color: blue; */
-	width: 374px;
-	height: 329px;
-	/* min-width: 374px;
-	min-height: 329px; */
-	/* width: 20%;
-	height: 40%; */
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
+	height: 100%;
+	width: 25%;
+	position:absolute;
+	bottom: 0;
+	display: flex;
 	z-index: -1;
 }
 
 .picture {
 	flex: 1;
-	margin: 0px 20px;
 	z-index: 0;
+	display: flex;
 }
 
 .picture img {
-	width: 100%;
-	
-
+	 max-width: 450px;
+	max-height: 650px;
+	margin: auto;
+	 /* display: flex; */
+	 margin-left: 30%;
+	 
 }
 
 #about-me {
-	/* display: none; */
-	flex: 2
+	/* display: flex; */
+	flex-direction: column;
+	flex: 2;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .about-me__title {
-	margin-top: 1em;
-	margin-bottom: 60px;
+
+	margin-top: 50px;
+	margin-bottom: 50px;
 	font-size: 30px;
 }
 
@@ -83,12 +97,13 @@ body {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
-	width: 60%;
+	width: 100%;
+	
+	
 }
 
 #about-me p {
-	width: 80%;
-	font-size: 14px;
+	font-size: 22px;
 }
 
 #gallery {
@@ -107,21 +122,15 @@ body {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
 	color: #fff;
-	/* background-color: #BEB45A; */
 	background-color: black;
+	background-color: #BEB45A;
+	background-color: #1C6474;
 	border-radius: 25px;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding: 8px;
 }
 
 .nav-pills .nav-link {
 	color: #000
-}
-
-.social-link {
-	max-width: 100%;
 }
 
 .item-column {
@@ -145,18 +154,6 @@ body {
 	padding: .5em;
 }
 
-.mg-prev,
-.mg-next {
-	width: 30px;
-	height: 30px;
-	border-radius: 00%;
-	justify-content: center;
-	align-items: center;
-	display: flex;
-	font-size: 24px;
-	display: none;
-}
-
 .quote {
 	font-family: 'Spectral';
 	font-style: italic;
@@ -175,7 +172,6 @@ body {
 .quote__author {
 	font-family: Spectral;
 	font-weight: 800;
-	font-style: mixed;
 	font-size: 22px;
 }
 
@@ -199,7 +195,7 @@ body {
 #services .container {
 	justify-content: space-between;
 	display: flex;
-	padding: 2em 0em;
+	padding: 2em 0;
 
 }
 
@@ -233,8 +229,8 @@ body {
 	width: 374px;
 	height: 329px;
 	position: absolute;
-	bottom: 0px;
-	right: 0px;
+	bottom: 0;
+	right: 0;
 	z-index: -1;
 }
 
@@ -268,82 +264,139 @@ form textarea {
 	margin-bottom: 20px;
 }
 
-submit {
+input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
 
+@media all and (max-width: 1680px) {
+.picture img {
+	max-width: 400px;
+   max-height: 300px;
+	display: flex;
+	/* margin-left: 30%; */
+   
+  
+
+}} 
+@media all and (max-width: 1380px) {
+.picture img {
+	max-width: 350px;
+   max-height: 250px;
+	display: flex;
+	margin-left: 30%;
+   
+  
+
+}} 
+
+
 @media all and (max-width: 1180px) {
-	.picture {
-		flex: 2;
-	}
-
-	/* .picture img {
-		width: 70%;
-		
-	
-	}
-	 */
-
-	#about,
-	#contact .container {
-		align-items: center;
-	}
-
-	.about-me__title {
-		margin-top: 0;
-		margin-bottom: 1em;
-	}
-
-	#about-me h6,
-	#about-me p {
+	.d-block {
 		width: 100%;
-	}
-	
-}
-
-@media all and (max-width: 1000px) {
-	#about {
-		flex-direction: column;
-
-	}
-
-	#about-me {
-		position: relative;
-		/* background-color: #fff; */
-		
-	}
-	.about-me__introduction {
-		/* font-family: 'Spectral';
-		font-weight: 800;
-		font-style: italic; */
-		width: 100%;
+		height: 500px;
 	}
 
 	.picture {
 		width: 50%;
 	}
 
-	/* .picture img {
-		width: 40%;
-		
-	
-	} */
-
 	.picture.left::before {
+		height: 100%;
+	}
+	.picture img {
+		max-width: 325px;
+	   max-height: 215px;
+		display: flex;
+		margin-left: 30%;
+	   
+	  
+	
+	}
+
+	#about-me {
+	margin: 0;
+
+	}
+
+	.about-me__introduction {
 		width: 100%;
-		height: 30%;
-		position: absolute;
-		/* background-color: #1C6474; */
-		bottom: auto;
-		top: 0;
-		left: 0px;
-		z-index: -1;
+		margin: 0;
+		
+	}
+
+	#contact .container {
+		align-items: center;
 	}
 
 	.about-me__title {
+		margin-top: 50px;
+		margin-bottom: 1em;
+	}
+
+	#about-me h6,
+	#about-me p {
+		width: 100%;
+		display: flex;
+	}
+
+} 
+@media all and (max-width: 1000px) {
+	#about {
+		display: flex;
+		flex-direction: column;
+		margin-top: 0;
+	}
+	#about-me {
+		z-index: 0;
+		margin: 0;
+		margin-top: -60px;
+	}
+	.about-me__title {
+		margin-top: 10px;
+		margin-bottom: 1em;
+	}
+	.about-me__introduction {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		margin: 0;
+		width: 100%;
+		z-index: 1;
+		/* background-color: yellow; */
+		
+	}
+
+	.d-block {
+		width: 100%;
+		height: auto;
+	}
+
+	
+
+	.picture img {
+		max-width: 200px;
+		max-height: 150px;
+		margin-left: 15%;
+		z-index: -1;
+
+	}
+
+	.picture.left::before {
+		width: 100%;
+		height: 15%;
+		position: absolute;
+		bottom: auto;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+
+	.about-me__title {
 		text-align: center;
-		margin-top: 1em;
+		margin-bottom: 3rem;
+		margin-top: 2rem;
 	}
 
 	#services .container {
@@ -354,7 +407,7 @@ submit {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
-		margin: 2em 0em
+		margin: 2em 0
 	}
 
 	.service__description {
@@ -382,8 +435,8 @@ submit {
 		width: 100%;
 		height: 30%;
 		position: absolute;
-		bottom: 0px;
-		right: 0px;
+		bottom: 0;
+		right: 0;
 		z-index: -1;
 	}
 }
@@ -392,6 +445,35 @@ submit {
 	.top-header {
 		flex-direction: column;
 		padding-inline: 0;
+	}
+	#about {
+		display: flex;
+		flex-direction: column;
+		
+	}
+	#about-me {
+		margin-top: 0px;
+	}
+
+	.picture img {
+		/* position: absolute;
+		left: 50px; */
+		/* max-width: 150px;
+		max-height: 500px;
+		margin-left: 10%; */
+		display: none;
+
+	}
+
+	#about_me {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+
+	.about-me__introduction {
+		width: 100%;
+		text-align: center;
 	}
 
 	.top-header .nav,
@@ -408,19 +490,8 @@ submit {
 
 	.picture.left::before,
 	.picture.right::before {
-		height: 150px;
-	}
-
-	.picture.left::before {
-		display: block;
+		height: 10%;
 		width: 100%;
-		height: 30%;
-		position: absolute;
-		/* background-color: #1C6474; */
-		bottom: auto;
-		top: 0;
-		left: 0px;
-		z-index: 0;
 	}
 
 	#services .container {
@@ -431,7 +502,7 @@ submit {
 		max-width: 90%;
 	}
 
-	#about,
+	
 	#contact {
 		padding-inline: 2em;
 		padding-block: 2em;
@@ -443,29 +514,6 @@ submit {
 
 	.picture {
 		width: 80%;
-	}
-
-	.picture img {
-		/* width: 20%; */
-		display: none;
-		
-	
-	}
-
-	#about {
-		display: block;
-		
-		/* background-color: #F6D2B8; */
-		/* background-color: blue; */
-		/* padding-inline: 100px;
-		padding-block: 100px;
-		position: relative; */
-	}
-
-	#about-me {
-		display: block;
-		flex-direction:column ;
-		/* background-color: yellow; */
+		height: 30%;
 	}
 }
-
