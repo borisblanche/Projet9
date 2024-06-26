@@ -161,6 +161,9 @@ class MauGallery {
         } else if (position === 'top') {
             this.element.insertAdjacentHTML('afterbegin', tagsBar);
         }
+        this.element.querySelectorAll('.nav-link').forEach(tag => {
+            tag.addEventListener('click', this.filterByTag.bind(this));
+        });
     }
 
     filterByTag(event) {
