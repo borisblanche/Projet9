@@ -7,7 +7,7 @@ class MauGallery {
             lightBox: true,
             lightboxId: 'galleryLightbox',
             showTags: true,
-            tagsPosition: 'bottom',
+            tagsPosition: 'top',
             navigation: true
         };
         this.options = { ...this.defaults, ...options };
